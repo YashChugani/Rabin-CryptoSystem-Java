@@ -99,6 +99,14 @@ src/
 
 ---
 
+## 🧩 Architecture Diagram
+
+The system follows a clean modular architecture with separation of concerns:
+
+![Architecture](assets/diagrams/architecture.png)
+
+---
+
 ## ⚙️ Execution Pipeline
 
 ### 🔹 Encryption Flow
@@ -139,6 +147,14 @@ For each root:
     ↓
 Return valid message
 ```
+
+---
+
+## 🔄 Rabin Cryptosystem Workflow
+
+The complete encryption and decryption process is visualized below:
+
+![Workflow](assets/diagrams/workflow.png)
 
 ---
 
