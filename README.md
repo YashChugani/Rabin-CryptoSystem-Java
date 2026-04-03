@@ -1,3 +1,7 @@
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Crypto](https://img.shields.io/badge/Cryptography-Rabin-blue)
+![Hash](https://img.shields.io/badge/Hash-SHA--512-green)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 # 🔐 Rabin Cryptosystem in Java
 
 ## 📌 Overview
