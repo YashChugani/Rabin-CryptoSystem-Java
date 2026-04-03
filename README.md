@@ -222,26 +222,79 @@ java rabin.app.Main
 
 ---
 
-## 📊 Sample Output
+## 📸 Sample Execution Outputs
 
-```
-=== RABIN CRYPTOSYSTEM ===
+This section demonstrates different execution scenarios of the Rabin Cryptosystem, covering **full workflow, validation, and constraint handling**.
 
-1. Demo Mode
-2. Custom Mode
+---
 
-=== KEY GENERATION ===
--> Generating 512-bit primes...
+## 🔹 Demo Mode — Complete Execution Pipeline
 
-=== ENCODING ===
--> Constructing: [HEADER][MESSAGE][HASH]
+This scenario demonstrates the **end-to-end working** of the system using automatically generated 512-bit primes.
 
-=== ENCRYPTION ===
-Ciphertext (hex): 8f3a...
+It includes:
+- Key generation (p, q, n)
+- Constraint validation
+- Encoding with SHA-512
+- Encryption
+- Decryption using CRT
+- Root validation
 
-=== ROOT ANALYSIS ===
-[OK] Valid message found: Hello Rabin
-```
+### 🧾 Key Generation & Constraints
+![Demo Step 1](assets/output/demo-mode/demo-mode-1.png)
+
+### 🔐 Encoding & Encryption
+![Demo Step 2](assets/output/demo-mode/demo-mode-2.png)
+
+### 🔓 Decryption & Root Analysis
+![Demo Step 3](assets/output/demo-mode/demo-mode-3.png)
+
+---
+
+## 🔹 Custom Mode — Valid Input Execution
+
+This scenario demonstrates **user-controlled execution** where valid primes are provided manually.
+
+It verifies:
+- Prime validation
+- Correct modulus computation
+- Successful encryption & decryption
+
+### 🧾 Input & Validation
+![Custom Step 1](assets/output/custom-mode-valid/custom-mode-valid-1.png)
+
+### 🔐 Encoding & Encryption
+![Custom Step 2](assets/output/custom-mode-valid/custom-mode-valid-2.png)
+
+### 🔓 Decryption & Valid Message Recovery
+![Custom Step 3](assets/output/custom-mode-valid/custom-mode-valid-3.png)
+
+---
+
+## ❌ Invalid Prime Handling
+
+This scenario shows how the system **rejects incorrect inputs**.
+
+- Non-prime values are detected
+- Execution is safely terminated
+- Clear error message is shown
+
+![Invalid Prime](assets/output/invalid-prime/invalid-prime-1.png)
+
+---
+
+## ❌ Message Size Constraint Handling
+
+This demonstrates enforcement of Rabin’s core constraint:
+
+m < n
+
+If the encoded message exceeds modulus capacity:
+- System halts encryption
+- Displays required vs available bits
+- Suggests corrective actions
+
+![Message Too Large](assets/output/message-too-large/message-too-large-1.png)
 
 ---
 
