@@ -32,14 +32,12 @@ It demonstrates:
 
 ### 🔹 Encryption
 
-[
-c = m^2 \mod n
-]
+$$c = m^2 \mod n$$
 
 Where:
 
-* ( m ) = encoded message
-* ( n = p \cdot q )
+* $m$ = encoded message
+* $n = p \cdot q$
 
 ---
 
@@ -47,27 +45,19 @@ Where:
 
 We solve:
 
-[
-m^2 \equiv c \mod n
-]
+$$m^2 \equiv c \mod n$$
 
 Steps:
 
 1. Compute modular square roots:
 
-[
-r_p = c^{\frac{p+1}{4}} \mod p
-]
+$$r_p = c^{\frac{p+1}{4}} \mod p$$
 
-[
-r_q = c^{\frac{q+1}{4}} \mod q
-]
+$$r_q = c^{\frac{q+1}{4}} \mod q$$
 
 2. Combine using Chinese Remainder Theorem (CRT):
 
-[
-x = \left( r_p \cdot q \cdot q^{-1} \bmod p + r_q \cdot p \cdot p^{-1} \bmod q \right) \bmod n
-]
+$$x = \left( r_p \cdot q \cdot q^{-1} \bmod p + r_q \cdot p \cdot p^{-1} \bmod q \right) \bmod n$$
 
 3. Obtain **four possible plaintexts**
 
@@ -163,14 +153,12 @@ Return valid message
 
 User inputs:
 
-* Prime ( p )
-* Prime ( q )
+* Prime $p$
+* Prime $q$
 
 Conditions:
 
-[
-p \equiv q \equiv 3 \mod 4
-]
+$$p \equiv q \equiv 3 \mod 4$$
 
 ✔ Must be prime
 ✔ Must satisfy Rabin condition
